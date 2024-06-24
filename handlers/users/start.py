@@ -6,6 +6,7 @@ import sqlite3,re
 from datetime import datetime
 from aiogram.types import  InlineKeyboardButton,InlineKeyboardMarkup
 
+
 conn = sqlite3.connect('bot.db')
 cursor = conn.cursor()
 
@@ -44,6 +45,7 @@ async def is_user_registered(telegram_id):
 def html_escape(text):
     escape_chars = {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}
     return re.sub(r'[&<>"\']', lambda match: escape_chars[match.group(0)], text)
+
 
 
 

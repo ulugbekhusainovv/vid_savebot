@@ -10,7 +10,7 @@ from .vid_down import Downloads
 import json
 import speedtest
 import asyncio
-
+# from utils.misc.checksub import check_subscriptions
 
 
 async def speed():

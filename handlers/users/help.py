@@ -1,10 +1,10 @@
 from aiogram.filters import Command
 from loader import dp,bot
-from aiogram import types
+from aiogram import types,F
 from aiogram.types.reaction_type_emoji import ReactionTypeEmoji
 import random
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-
+# from filters import CheckMember
 
 def programmer_button():
     btn = InlineKeyboardBuilder()
@@ -25,3 +25,8 @@ async def help_bot(message:types.Message):
     except: 
         pass
     await message.reply("<b>Sizga qanday yordam kerak </b>", reply_markup=programmer_button())
+
+
+# @dp.message(F.text, CheckMember())
+# async def echo_bot(message:types.Message):
+#     await message.reply("Salom")
